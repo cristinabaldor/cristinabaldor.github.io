@@ -38,6 +38,6 @@ df = pd.DataFrame(data)
 
 header_content = readfile(web['header'])
 footer_content=readfile(web['footer'])
-index_content=header_content+web['content']+footer_content
 web['content']=df.to_html(index=False,table_id='Sales')
+index_content=header_content+web['content']+footer_content
 create_index('index.html',index_content)
